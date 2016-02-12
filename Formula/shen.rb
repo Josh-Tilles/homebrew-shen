@@ -16,7 +16,10 @@ class Shen < Formula
       system "sbcl", "--load", "install.lsp"
       bin.install "Shen.exe" => "shen"
     end
+    libexec.install Dir["*"]
+  end
+
+  test do
     raise "foo"
-    # libexec.install "everything except for the Platforms directory"
   end
 end
